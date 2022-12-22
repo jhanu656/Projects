@@ -1,0 +1,136 @@
+import java.util.*;
+class Project
+{ Scanner sc=new Scanner(System.in);
+int b,c,d,e,f,g,h,a,p,t;
+    String name,r,r2,r1,r4,r3,r5,r6;
+    public void detail()
+    {  
+        System.out.println("");
+        System.out.println("Enter the Student Name");
+        String name=sc.next();
+        System.out.println("Enter the Roll Number");
+        int a=sc.nextInt();
+        System.out.println("Enter marks in Telugu");
+        int b=sc.nextInt();
+         if(b>=35 && b<100)
+        {
+            r="pass";
+        }
+        else
+        {
+            r="Fail";
+        }
+         System.out.println("Enter marks in Hindi");
+          int c=sc.nextInt();
+          if(c>=35 && c<100)
+        {
+            r1="pass";
+        }
+        else
+        {
+            r1="Fail";
+        }
+         System.out.println("Enter marks in English");
+         int d=sc.nextInt();
+          if(d>=35&& d<100)
+        {
+            r2="pass";
+        }
+        else
+        {
+            r2="Fail";
+        }
+         System.out.println("Enter marks in mathematics");
+          int e=sc.nextInt();
+          if(e>=35 && e<100)
+        {
+            r3="pass";
+        }
+        else
+        {
+            r3="Fail";
+        }
+         System.out.println("Enter marks in Physics :");
+          int f=sc.nextInt();
+          if(f>=35 && f<100)
+        {
+            r4="pass";
+        }
+        else
+        {
+            r4="Fail";
+        }
+        System.out.println("Enter marks in Chemistry:");
+          int g=sc.nextInt();
+          if(g>=35 && g<100)
+        {
+            r5="pass";
+        }
+        else
+        {
+            r5="Fail";
+        }
+        System.out.println("Enter marks in Social :");
+          int h=sc.nextInt();
+          if(h>=35 && h<100)
+        {
+            r6="pass";
+        }
+        else
+        {
+            r6="Fail";
+        }
+    }
+
+public void cal()
+    {
+        int t=(b+c+d+e+f+g+h);
+        int p=(t/700)*100;
+    }
+    
+public void show()
+{
+    System.out.println("Stundent Name: "+name);
+    System.out.println("Student Roll Number: "+a);
+    System.out.println("Telugu:"+b+r);
+    System.out.println("Hindi:"+c+r1);
+    System.out.println("English:"+d+r2);
+    System.out.println("Mathematics:"+e+r3);
+    System.out.println("Physics:"+f+r4);
+    System.out.println("Chemistry:"+g+r5);
+    System.out.println("Social:"+h+r6);
+    System.out.printf("Total:"+t);
+    System.out.println("Percentage:"+p);
+    System.out.println("");
+}
+public void resultview()
+{
+    int x=sc.nextInt();
+    if(x==a)
+    show();
+    else
+    System.out.println("No result found\n Enter correct Roll number");
+    }
+}
+
+public class Project3
+{
+    public static void main(String[] args)
+    {   
+        Scanner s=new Scanner(System.in);
+        System.out.println("WELCOME TO STUDENT MANAGEMENT SYSTEM");
+        System.out.println("Enter number of students:");
+        int n=s.nextInt();
+        Project p=new Project();
+        for(int i=1;i<=n;i++)
+        {
+        
+        p.detail();
+        p.cal();
+        p.show();
+        }
+        System.out.println("To view your Result Enter the Roll number to view Result");
+            p.resultview();
+        System.out.println("𝕋𝕙𝕒𝕟𝕜𝕤 𝕗𝕠𝕣 𝕧𝕚𝕤𝕚𝕥𝕚𝕟𝕘"); 
+    }
+}
